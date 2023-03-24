@@ -44,15 +44,15 @@ def download_video():
 
 @app.route("/downloadAudio", methods = ["GET", "POST"])
 def download_audio():
-    print(yt)
-    descricao = yt.title + str(yt.views) + str(yt.length) + yt.description + str(yt.rating)
+    #print(yt)
+    descricao = yt.title
     if request.method == "POST":
         if 'submit_button' in request.form:
             path = request.form['path']
             quality_anwser = request.form['quality']
             file_name = request.form['file_name']
             audioDownload(quality_anwser, yt, file_name, path)
-            return convertion()
+            return redirect(url_for('convertion'))
     return render_template("download_audio.html", descricao=descricao)
 
 @app.route("/convertion", methods = ["GET", "POST"])
