@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tahoma", sans-serif;
+}
+
+
+body {
+margin: 0;
+padding: 0;
+background: #eeeeee;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+height: 100vh;
+}
+
+.center h2 {
+text-align: center;
+padding: 40px 0;
+}
+
+.center form {
+padding: 0 40px;
+box-sizing: border-box;
+}
+
+.center {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 800px;
+height: 400px;
+border-radius: 50px;
+background: #e0e0e0;
+box-shadow: 20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+}
+
+form .txtField {
+width: 100%;
+position: relative;
+margin-top: 100px;
+}
+
+.txtField h1{
+width: 100%;
+margin-top: 50px;
+padding: 0 15px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.wrap {
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 10%;
+}
+
+.submit_button {
+width: 200px;
+height: 75px;
+border: none;
+margin-bottom: 30px;
+background: #e0e0e0;
+border-radius: 50px;
+box-shadow: 20px 20px 60px #c7c7c7,
+    -20px -20px 60px #f9f9f9;
+}
+
+.submit_button:hover {
+width: 200px;
+height: 75px;
+border: none;
+background: #e0e0e0;
+border-radius: 50px;
+box-shadow: inset 20px 20px 60px #bebebe,
+    inset -20px -20px 60px #ffffff;
+}
+
+.social_media{
+    position: absolute;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    top: 90%;
+    left: 50%;
+}
+
+.linkedin{
+padding-right: 5px;
+}
+
+
+.github{
+padding-left: 5px;
+}

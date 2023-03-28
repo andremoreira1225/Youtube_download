@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tahoma", sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: #eeeeee;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+.center h2{
+    text-align: center;
+    padding: 0px 0;
+    margin-top: -30px;
+}
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+    height: 600px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+     -20px -20px 60px #ffffff;
+}
+
+.button_back{
+    cursor: pointer;
+    border: none;
+    background: #e0e0e0;
+    display: flex;
+    margin-top: 25px;
+    margin-right: 15px;
+    border-radius: 133px;
+    box-shadow:  20px 20px 60px #c7c7c7,
+     -20px -20px 60px #f9f9f9;
+    
+}
+
+.bi.bi-backspace{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin: 0 5px;
+    font-size: 16px;
+    
+    border-radius: 50%;
+    box-shadow:  4px 4px 8px #bebebe,
+     -4px -4px 8px #ffffff;
+}
+
+.bi.bi-backspace:hover{
+    box-shadow: inset 4px 4px 8px #bebebe,
+    inset -4px -4px 8px #ffffff;
+}
+
+
+form .txtField{
+    width: 100%;
+    position: relative;
+    margin-top: 50px;
+}
+
+.txtField input{
+    width: 100%;
+    margin-top: 50px;
+    padding: 0 15px;
+    height: 40px;
+    font-size: 16px;
+    background: #e0e0e0;
+    border-radius: 50px;
+    border: none;
+    box-shadow:  20px 20px 60px #bebebe,
+     -20px -20px 60px #ffffff;
+    }
+
+.txtField label{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+    }
+
+.txtField input:hover{
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: inset 20px 20px 60px #bebebe,
+    inset -20px -20px 60px #ffffff;
+}
+
+
+    
+.radio-group{
+    margin-top: 90px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.radio-button{
+    padding: 10px;
+}
+
+
+
+.radio{
+    cursor: pointer;
+    border: none;
+    background: #e0e0e0;
+    border-radius: 133px;
+    box-shadow:  20px 20px 60px #c7c7c7,
+     -20px -20px 60px #f9f9f9;
+}
+
+.radio-input{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+}
+.fa-solid.fa-check{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    color: #091909;
+    background: #c5c5c5;
+    line-height: 50px;
+    text-align: center;
+    margin: 0 5px;
+    font-size: 16px;
+    border-radius: 50%;
+    box-shadow:  4px 4px 8px #bebebe,
+     -4px -4px 8px #ffffff;
+}
+
+.fa-solid.fa-check:hover{
+    box-shadow: inset 4px 4px 8px #bebebe,
+    inset -4px -4px 8px #ffffff;
+}
+
+.radio-input:checked ~ .fa-solid.fa-check{
+    color: rgb(255, 0, 0);
+    box-shadow: inset 4px 4px 8px #bebebe,
+    inset -4px -4px 8px #ffffff;
+}
+
+.wrap{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:15%;
+}
+
+.submit_button{
+    width: 200px;
+    height: 75px;
+    border: none;
+    margin-bottom: 50px;
+    background: #e0e0e0;
+    border-radius: 50px;
+    box-shadow:  20px 20px 60px #c7c7c7,
+     -20px -20px 60px #f9f9f9;
+}
+
+.submit_button:hover{
+    width: 200px;
+    height: 75px;
+    border: none;
+    background: #e0e0e0;
+    border-radius: 50px;
+    box-shadow: inset 20px 20px 60px #bebebe,
+    inset -20px -20px 60px #ffffff;
+}
+
+.social_media{
+    position: absolute;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    top: 90%;
+    left: 50%;
+    }
+
+.linkedin{
+    padding-right: 5px;
+    }
+    
+    
+    .github{
+    padding-left: 5px;
+    }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=b, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href={{ url_for('static', filename='initial_page.css') }}>
+    <script src="https://kit.fontawesome.com/4a16c056e8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <title>Youtube Downloader</title>
+</head>
+<body>
+    <div class="center">
+        <h1><i class="bi bi-youtube"></i> Youtube Downloader</h1>
+        <form method="post">
+            <div class="box">
+                <div class="txtField">
+                    <input name="link" placeholder="Enter the link of youtube video" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                </div>    
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" class="radio-input" name="type" id="user_role_author_or_referee" value="mp4" checked>Video Mp4
+                        <i class="fa-solid fa-check"></i>
+                    </label>
+                    <label>
+                        <input type="radio" class="radio-input" name="type" id="user_role_author_or_referee" value="mp3">Audio Mp3
+                        <i class="fa-solid fa-check"></i>
+                    </label>
+                </div>
+                
+                </div>
+                <div class="wrap">
+                    <input class="submit_button" name="submit_button" type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="social_media">
+        <label class="linkedin" for="linkedin">
+            <a href="https://www.linkedin.com/in/andr%C3%A9-moreira-0b196a1b2/"><i class="bi bi-linkedin" style="font-size: 50px;  color: #000000;"></i></a>
+        </label>
+        <label class="github" for="github">
+            <a href="https://github.com/andremoreira1225"><i class="bi bi-github" style="font-size: 50px; color: #000000;"></i></a>
+        </label>
+    </div>
+</body>
+</html>

@@ -1,9 +1,11 @@
+
 from flask import Flask, request, render_template, redirect, url_for, session
 from pytube import YouTube
 from moviepy.editor import *
 import os
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = '123456'
 
 
 @app.route("/", methods = ["GET", "POST"])
@@ -14,7 +16,6 @@ def inicial_page():
             global yt 
             yt = YouTube(pLink)
             type_file = request.form['type']
-            type(yt)
             if(pLink != None):
                 if(type_file == "mp4"):
                     return redirect(url_for("download_video"))
@@ -24,7 +25,8 @@ def inicial_page():
                     return redirect(url_for("inicial_page"))
             else:
                 return redirect(url_for("inicial_page"))
-    return render_template("inicial_page.html")
+    return render_template("initial_page.html")
+
 
 
 @app.route("/downloadVideo", methods = ["GET", "POST"])
@@ -39,12 +41,13 @@ def download_video():
             file_name = request.form['file_name']
             videoDownload(quality_anwser, yt, path)
             merge(file_name, path)
-            return convertion()
+          
+
+            return redirect(url_for('convertion'))
     return render_template("download_video.html", descricao=descricao, tag=itagV)
 
 @app.route("/downloadAudio", methods = ["GET", "POST"])
 def download_audio():
-    #print(yt)
     descricao = yt.title
     if request.method == "POST":
         if 'submit_button' in request.form:
@@ -85,11 +88,7 @@ def videoPreferences(yt):
 
 
 def videoDownload(itagV, yt, path):
-    print("\n **************************************************")
-
     itagA = 140
-
-    print(itagV, path)
     dV = yt.streams.get_by_itag(itagV)
     dV.download(filename= "video.mp4", output_path=path)
 

@@ -4,178 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href={{ url_for('static', filename='download_audio.css') }}>
     <script src="https://kit.fontawesome.com/4a16c056e8.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Tahoma", sans-serif;
-        }
-        body{
-            margin: 0;
-            padding: 0;
-            background: #eeeeee;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-            height: 100vh;
-        }
+    <title>Youtube Downloader</title>
 
-        .center h2{
-            text-align: center;
-            padding: 40px 0;
-        }
-        .center form{
-            padding: 0 40px;
-            box-sizing: border-box;
-        }
-  
-        .center{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 1200px;
-            height: 600px;
-            border-radius: 50px;
-            background: #e0e0e0;
-            box-shadow:  20px 20px 60px #bebebe,
-             -20px -20px 60px #ffffff;
-        }
-
-        form .txtField{
-            width: 100%;
-            position: relative;
-            margin-top: 50px;
-        }
-
-        .txtField input{
-            width: 100%;
-            margin-top: 50px;
-            padding: 0 15px;
-            height: 40px;
-            font-size: 16px;
-            background: #e0e0e0;
-            border-radius: 50px;
-            border: none;
-            box-shadow:  20px 20px 60px #bebebe,
-             -20px -20px 60px #ffffff;
-            }
-
-        .txtField label{
-            position: absolute;
-            top: 50%;
-            left: 15px;
-            color: #adadad;
-            transform: translateY(-50%);
-            font-size: 16px;
-            pointer-events: none;
-            transition: .5s;
-            }
-        
-        .txtField input:hover{
-            border-radius: 50px;
-            background: #e0e0e0;
-            box-shadow: inset 20px 20px 60px #bebebe,
-            inset -20px -20px 60px #ffffff;
-        }
-
-        
-            
-        .radio-group{
-            margin-top: 90px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            position: absolute;
-        }
-
-        .radio-button{
-            padding: 10px;
-        }
-
-      
-
-        .radio{
-            cursor: pointer;
-            border: none;
-            background: #e0e0e0;
-            border-radius: 133px;
-            box-shadow:  20px 20px 60px #c7c7c7,
-             -20px -20px 60px #f9f9f9;
-        }
-
-        .radio-input{
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            -ms-appearance: none;
-            -o-appearance: none;
-        }
-        .fa-solid.fa-check{
-            position: relative;
-            width: 50px;
-            height: 50px;
-            color: #091909;
-            background: #c5c5c5;
-            line-height: 50px;
-            text-align: center;
-            margin: 0 5px;
-            font-size: 16px;
-            border-radius: 50%;
-            box-shadow:  4px 4px 8px #bebebe,
-             -4px -4px 8px #ffffff;
-        }
-
-        .fa-solid.fa-check:hover{
-            box-shadow: inset 4px 4px 8px #bebebe,
-            inset -4px -4px 8px #ffffff;
-        }
-
-        .radio-input:checked ~ .fa-solid.fa-check{
-            color: rgb(255, 0, 0);
-            box-shadow: inset 4px 4px 8px #bebebe,
-            inset -4px -4px 8px #ffffff;
-        }
-        
-        .wrap{
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top:15%;
-        }
-
-        .submit_button{
-            width: 200px;
-            height: 75px;
-            border: none;
-            margin-bottom: 50px;
-            background: #e0e0e0;
-            border-radius: 50px;
-            box-shadow:  20px 20px 60px #c7c7c7,
-             -20px -20px 60px #f9f9f9;
-        }
-
-        .submit_button:hover{
-            width: 200px;
-            height: 75px;
-            border: none;
-            background: #e0e0e0;
-            border-radius: 50px;
-            box-shadow: inset 20px 20px 60px #bebebe,
-            inset -20px -20px 60px #ffffff;
-        }
-  
-    </style>
 </head>
 <body>
     <div class="center">
         <form method="post">
             <div class="box">
+                <button class="button_back" formaction="/" method="get">
+                    <i class="bi bi-backspace"></i>
+                </button>
                 <H2>TITLE: {{descricao}}</H2>
                 <div class="txtField">
                     <input name="path" placeholder="Enter destination path" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
@@ -200,6 +42,13 @@
             </div>
         </form>
     </div>
-    
+    <div class="social_media">
+        <label class="linkedin" for="linkedin">
+            <a href="https://www.linkedin.com/in/andr%C3%A9-moreira-0b196a1b2/"><i class="bi bi-linkedin" style="font-size: 50px;  color: #000000;"></i></a>
+        </label>
+        <label class="github" for="github">
+            <a href="https://github.com/andremoreira1225"><i class="bi bi-github" style="font-size: 50px; color: #000000;"></i></a>
+        </label>
+    </div>
 </body>
 </html>
